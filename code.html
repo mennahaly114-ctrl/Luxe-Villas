@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUXE | Redefining Architectural Luxury</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(249,249,249,1) 100%);
+        }
+        .milled-border {
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+        }
+        @keyframes subtle-zoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+        .animate-zoom {
+            animation: subtle-zoom 20s infinite alternate ease-in-out;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#1a1c1f",
+                      "secondary-container": "#fddeb5",
+                      "on-tertiary-container": "#7884a2",
+                      "on-primary-fixed-variant": "#45474a",
+                      "surface": "#f9f9f9",
+                      "surface-variant": "#e2e2e2",
+                      "inverse-surface": "#2f3131",
+                      "surface-tint": "#5d5e62",
+                      "on-surface": "#1a1c1c",
+                      "secondary": "#715b3b",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-secondary-fixed-variant": "#584325",
+                      "surface-container-low": "#f3f3f3",
+                      "background": "#f9f9f9",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed-dim": "#bac6e7",
+                      "primary-fixed-dim": "#c6c6ca",
+                      "outline": "#76777b",
+                      "on-primary-container": "#838487",
+                      "tertiary-container": "#0e1b34",
+                      "primary-container": "#1a1c1f",
+                      "on-surface-variant": "#45474a",
+                      "on-secondary-fixed": "#281802",
+                      "on-secondary-container": "#786140",
+                      "surface-container-high": "#e8e8e8",
+                      "tertiary": "#000000",
+                      "primary-fixed": "#e2e2e6",
+                      "outline-variant": "#c6c6ca",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed": "#0e1b34",
+                      "on-primary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "surface-container": "#eeeeee",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#fddeb5",
+                      "tertiary-fixed": "#d9e2ff",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "inverse-on-surface": "#f1f1f1",
+                      "inverse-primary": "#c6c6ca",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#e0c29b",
+                      "on-tertiary-fixed-variant": "#3b4662",
+                      "surface-dim": "#dadada",
+                      "surface-bright": "#f9f9f9",
+                      "primary": "#000000",
+                      "on-background": "#1a1c1c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "margin-mobile": "20px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "margin-tablet": "32px"
+              },
+              "fontFamily": {
+                      "label-md": ["Manrope"],
+                      "headline-lg-mobile": ["Libre Caslon Text"],
+                      "headline-md": ["Libre Caslon Text"],
+                      "body-md": ["Manrope"],
+                      "label-sm": ["Manrope"],
+                      "headline-lg": ["Libre Caslon Text"],
+                      "body-lg": ["Manrope"],
+                      "display-lg": ["Libre Caslon Text"]
+              },
+              "fontSize": {
+                      "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop py-6">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary">LUXE</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Portfolio</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Concierge</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Experience</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Owners</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-primary" data-icon="search">search</button>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-none font-label-md text-label-md milled-border hover:opacity-80 transition-opacity">Book Now</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[800px] overflow-hidden flex items-center">
+<div class="absolute inset-0 z-0">
+<img alt="Luxury Villa" class="w-full h-full object-cover animate-zoom" data-alt="An ultra-modern architectural masterpiece nestled on a Mediterranean cliffside at dusk. The structure features clean white lines, floor-to-ceiling glass walls, and a cantilevered infinity pool reflecting a soft purple and orange sunset sky. The lighting is sophisticated and atmospheric, emphasizing the minimalist luxury aesthetic of the Property Lux brand. High-end outdoor furniture is arranged on a spacious stone terrace, overlooking a calm, deep blue sea." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1TqOmEzkx1J5dqidDirssxndZl9mOWNTCqEuYWnMvykG5DrJHSpDf0UmxcM8iBYhHUGHDDT1sfK_2RDMOq0LUbj6ekXGyNLI2KoTIdVII5qw6zEFjMKfG0drUnhWdaqYLGtTvpkX2q5jmDoXBjTVpExOQNIl9uQe9iqapvLKjJzjkNR-PlPtJajykQxnqHm18iwzeHxsPUsaPc5EdwsUurLc6RrM4amEAXP_IPY8j877fvK3kcZZ5Xpl1HnCpTQhP4Sg1_H5HEUk"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="max-w-3xl">
+<h1 class="font-display-lg text-display-lg text-primary mb-8">Redefining Architectural Luxury</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-xl">Curated exceptional residences for those who seek more than just a stay. Experience the pinnacle of design-forward living.</p>
+<button class="bg-primary text-on-primary px-10 py-5 rounded-none font-label-md text-label-md milled-border hover:opacity-90 transition-all flex items-center gap-3">
+                        Explore Collection
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Search Bar Section -->
+<section class="relative z-20 -mt-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-surface-container-lowest shadow-2xl p-4 flex flex-col md:flex-row gap-2">
+<div class="flex-1 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-outline-variant">
+<div class="px-8 py-4">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-1">Location</label>
+<input class="w-full border-none p-0 focus:ring-0 bg-transparent font-body-md text-body-md placeholder:text-on-surface-variant/40" placeholder="Where to?" type="text"/>
+</div>
+<div class="px-8 py-4">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-1">Dates</label>
+<input class="w-full border-none p-0 focus:ring-0 bg-transparent font-body-md text-body-md placeholder:text-on-surface-variant/40" placeholder="Add dates" type="text"/>
+</div>
+<div class="px-8 py-4">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-1">Guests</label>
+<input class="w-full border-none p-0 focus:ring-0 bg-transparent font-body-md text-body-md placeholder:text-on-surface-variant/40" placeholder="Add guests" type="text"/>
+</div>
+</div>
+<button class="bg-primary text-on-primary p-6 flex items-center justify-center hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</section>
+<!-- Featured Properties Grid -->
+<section class="py-32 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em]">Curation</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-2">Featured Listings</h2>
+</div>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">View All Properties</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Property Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/2] overflow-hidden rounded-xl mb-6 relative">
+<img alt="Modernist Villa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A futuristic black and glass residential structure perched amidst a lush pine forest. The architecture uses sharp geometric angles and floating balconies. Soft interior warm lighting spills out into the misty twilight forest, creating a mood of secluded, high-end tranquility. The image quality is crisp with a focus on materials like dark slate, cedar wood, and tempered glass." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCccvC1VDccAtyQL7Y20WGw6TBDy6y60mTg84CU9iZhw533KjRDs83BrUKPQY-obZQ9_kM89VdXtAWEHZROWzCccb1MK_lrzsefToA_iB2gMurdLn16BmrTGQ34Hso27OcS29Cz_6H9cLM8tsTlhS2lI8PQQH-AkvKwsOCce4y_y2xTKhifDGGWqhsgSBq1NHyP2AbPPakj6wKWuzsykNCXYWQ7jNp7siBAivt0LP9aKwbnCpsfetoh_SdLCHtbaXJiPHb-xAFf6yI"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-sm text-label-sm text-primary">
+                            New Arrival
+                        </div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">The Obsidian House</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+                                Bergen, Norway
+                            </p>
+</div>
+<div class="text-right">
+<p class="font-headline-md text-headline-md text-primary">€1,850</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">per night</p>
+</div>
+</div>
+<div class="mt-4 flex gap-2">
+<span class="bg-surface-container px-4 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant">3 Bedrooms</span>
+<span class="bg-surface-container px-4 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant">Sauna</span>
+<span class="bg-surface-container px-4 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant">Private Chef</span>
+</div>
+</div>
+<!-- Property Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/2] overflow-hidden rounded-xl mb-6 relative">
+<img alt="Brutalist Masterpiece" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A high-contrast architectural photograph of a brutalist-style concrete villa overlooking a desert landscape. The building features massive cantilevered slabs and deep shadows. The midday sun creates sharp lines on the smooth gray concrete surfaces. A minimalist circular fire pit sits in the center of a sunken courtyard, surrounded by sculptural desert plants. The mood is powerful and artistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEyz4MMuGPs_HYcFxJ2_ueRNfqjrpAYFB32vzJLfmteQA3_Dzp0acNOQi02-EsG5Nr1Bh90dPLDmRQlbz7KC2_16gVeWHO_-77RoPtNFr_cKm15z3Gp5GbCk-a4f8QwpRXJMegMCqMfBTapFNDvcYVm6rnKI_d9Mnk0KArKXPnHaMmyxzJvswYeHuk11-RAy1JtQWIOfqJ_CzQ-Z50wuTdV5eW0y-1rJyyuaQhmOuz2XnFFnkaEiyep2c5qZgZamqJR_C0UMuoB0g"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Concrete Oasis</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+                                Joshua Tree, CA
+                            </p>
+</div>
+<div class="text-right">
+<p class="font-headline-md text-headline-md text-primary">€2,400</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">per night</p>
+</div>
+</div>
+<div class="mt-4 flex gap-2">
+<span class="bg-surface-container px-4 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant">4 Bedrooms</span>
+<span class="bg-surface-container px-4 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant">Observatory</span>
+<span class="bg-surface-container px-4 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant">Pool</span>
+</div>
+</div>
+<!-- Property Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/2] overflow-hidden rounded-xl mb-6 relative">
+<img alt="Coastal Sanctuary" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A pristine white Mediterranean villa with arched doorways and limestone floors. The house opens directly onto a private turquoise cove with crystal clear water. The aesthetic is light, airy, and effortlessly luxurious, with natural linen drapes blowing in the sea breeze. The lighting is bright and ethereal, capturing the feeling of a perfect summer morning in a coastal paradise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmsCtgzPr0kCNLu8Vvn2G0TaX5NnOXFovjAE9imhMl752XazAbcDw1qpq88oxtrgQxcSkn8LVZdtvjexZVl0LD_d9Ozg3e5H4le5jGN0Vwg4jqnjVyf5F71e1lJossL0KV3vNctOmqwFWDltJ7hSiW7C9g1FuOG2BXhRreZYU0DLW4m6cloUvdrrw1RxB6DFgs02TET75zwKOG21m9QDgSyKPkMO3fl-W66h8QshcpqlmAf8faxmF57je89HViQ6ynmQ5LOFHILRg"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">The Azure Pavilion</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+                                Mykonos, Greece
+                            </p>
+</div>
+<div class="text-right">
+<p class="font-headline-md text-headline-md text-primary">€3,100</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">per night</p>
+</div>
+</div>
+<div class="mt-4 flex gap-2">
+<span class="bg-surface-container px-4 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant">5 Bedrooms</span>
+<span class="bg-surface-container px-4 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant">Yacht Access</span>
+<span class="bg-surface-container px-4 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant">Gym</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition / Bento Grid -->
+<section class="bg-primary py-32">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 bg-surface/5 backdrop-blur-sm p-16 flex flex-col justify-between h-[600px] border border-white/10 relative overflow-hidden group">
+<div class="relative z-10">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-[0.2em] mb-4 block">Immersive Tech</span>
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-6">3D Virtual Tours</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-lg mb-8">Every residence in our collection is digitally mapped in high fidelity, allowing you to walk through your next destination before you even book. Experience architectural nuances with millimetric precision.</p>
+<button class="bg-secondary text-on-secondary px-8 py-4 font-label-md text-label-md milled-border">Launch Tour Engine</button>
+</div>
+<div class="absolute right-0 bottom-0 w-2/3 h-full opacity-30 group-hover:opacity-50 transition-opacity">
+<img alt="3D Wireframe" class="w-full h-full object-cover grayscale" data-alt="An abstract, high-tech visualization of a luxury home's interior represented as a sophisticated 3D wireframe mesh. Glowing cyan lines trace the furniture and architectural structural elements against a deep charcoal background. The image evokes a sense of advanced digital precision and futuristic property exploration, fitting the luxury tech-concierge theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUYRqJd7z8oHTSE-X54Nr-DB0AxzwO9wwuZ5FUbZbRcly7lOtHDQNXSH2nKBCWoLkRNiC6A97YtRklZ2D51EU8r4OSMffNHC6Oz34wo71AGdjqYVYbUQGU8zM9AgCKsLyWzRHnYoeApUdnspwKJy-nrZ9Lb_Ax3t73Vdlu304pNVm3LEV88TLmg7tZJLv5sUmMvsg7TM9fBCXahtiTZpBSPeeIGmtw2Q2tDfoUqGSrTwLt5P8JNHXPS-iHfbsxMuzAyA9HKuK3CqU"/>
+</div>
+</div>
+<div class="md:col-span-4 bg-secondary p-12 flex flex-col justify-end h-[600px] text-on-secondary border border-white/10 group">
+<span class="material-symbols-outlined text-[48px] mb-8" data-icon="concierge">concierge</span>
+<h2 class="font-headline-md text-headline-md mb-4">Bespoke Concierge</h2>
+<p class="font-body-md text-body-md text-secondary-container/80 mb-8">From private aviation to Michelin-starred dining in-house, our 24/7 concierge team handles every detail of your journey with absolute discretion.</p>
+<div class="flex flex-col gap-4">
+<div class="h-1 bg-on-secondary/20 w-full overflow-hidden">
+<div class="h-full bg-secondary-container w-1/3 group-hover:w-full transition-all duration-1000"></div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Excellence Level: 100%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-32 px-margin-desktop max-w-container-max mx-auto text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Stay Informed</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Receive early access to new properties and architectural insights curated for the modern traveler.</p>
+<form class="max-w-xl mx-auto flex gap-4">
+<input class="flex-1 bg-transparent border-b border-outline focus:border-primary border-t-0 border-x-0 py-4 px-0 outline-none font-body-md text-body-md focus:ring-0" placeholder="Email Address" type="email"/>
+<button class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 uppercase tracking-widest" type="submit">Subscribe</button>
+</form>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center border-t border-outline-variant">
+<div class="font-display-lg text-headline-md text-primary mb-8 md:mb-0">LUXE</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#">Contact Support</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#">Press Kit</a>
+</div>
+<div class="text-on-surface-variant font-body-md text-body-md">
+                © 2024 LUXE Architectural Rentals. All rights reserved.
+            </div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for header scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm');
+                header.querySelector('nav').classList.remove('py-6');
+                header.querySelector('nav').classList.add('py-4');
+            } else {
+                header.classList.remove('shadow-sm');
+                header.querySelector('nav').classList.remove('py-4');
+                header.querySelector('nav').classList.add('py-6');
+            }
+        });
+
+        // Simple parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const heroImg = document.querySelector('.animate-zoom');
+            if (heroImg) {
+                heroImg.style.transform = `translateY(${scroll * 0.4}px) scale(1.05)`;
+            }
+        });
+    </script>
+</body></html>
